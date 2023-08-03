@@ -1,0 +1,31 @@
+1)
+ a) 	
+S       S -> XY
+XY      X -> XaA
+XaAY	X -> XbB
+XbBaAY	Ba -> aB
+XbaBAY  AY -> Ya
+XbaBYa	BY -> Yb
+XbaYba	X -> F
+FbaYba 	Fb -> bF 
+bFaYba 	Fa -> aF 
+baFYba 	FY -> & 
+baba 
+
+
+b)
+S 	S -> XY 
+XY 	X -> XbB 
+XbBY 	X -> XaA
+XaAbBY	Ab -> bA 
+XabABY	BY -> Yb 
+XabAYb  AY -> Ya 
+XabYab  X -> F
+FabYab  Fa -> aF 
+aFbYab  Fb -> bF 
+abFYab  FY -> & 
+abab 
+
+
+2) L(G) = ({S}, {a, b}, P , S} 
+P = { S -> aa | bb | ba | ab1 }
