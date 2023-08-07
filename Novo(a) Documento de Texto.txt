@@ -29,3 +29,19 @@ abab
 
 2) L(G) = ({S}, {a, b}, P , S} 
 P = { S -> aa | bb | ba | ab1 }
+
+5) a) Prefixo: {ε, t, te, teo, teor, teori}
+      Sufixos: {ε, a, ia, ria, oria, eoria} 
+
+   b) Prefixo: {ε, u, un, uni, univ, unive, univer, univers, universi, universid, universida, universidad}
+      Sufixos: {ε, e, de, ade, dade, idade, sidade, rsidade, ersidadem versidade, iversidade, niversidade}
+
+   c) Prefixo: {ε, a, aa}
+      Sufixos: {ε, a, aa} 
+
+   d) Prefixo: {ε, a, ab, abc, abcc, abccb}
+      Sufixos: {ε, a, ba, cba, ccba, bccba}
+
+   e) 
+
+6) e 
