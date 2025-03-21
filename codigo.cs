@@ -14,40 +14,19 @@ public class Manager : MonoBehaviour
     void Start()
     {
         // Instanciando os tetraedros
-        for (int i = 0; i <= 8; i++)
-        {
-            if (i == 0)
-            {
-                vetGameObj[i] = Instantiate(tetrahedron, new Vector3(0, 0, 0), Quaternion.identity); // tetraedro base
-            }
-            else
-            {
-                if (i >= 3)
-                {
-                    vetGameObj[i] = Instantiate(tetrahedron, new Vector3(vetGameObj[i - 1].transform.position.x - 0.5f, 0, vetGameObj[i - 1].transform.position.z + 0.86603f), vetGameObj[i - 1].transform.rotation);
-                }
-                else
-                {
-                    vetGameObj[i] = Instantiate(tetrahedron, new Vector3(vetGameObj[i - 1].transform.position.x + 1, 0, 0), vetGameObj[i - 1].transform.rotation);
-                }
-                if(i == 5)
-                {
-                    vetGameObj[i] = Instantiate(tetrahedron, new Vector3(0.5f, 0, 0.86603f), vetGameObj[i - 1].transform.rotation);
-                }
-                else
-                {
-                    if(i >= 6)
-                    {
-                        vetGameObj[i] = Instantiate(tetrahedron, new Vector3(0.5f, 0.86603f, 0.28868f), vetGameObj[i - 1].transform.rotation);
-                    }
-                    if(i == 7)
-                    {
-                        vetGameObj[i] = Instantiate(tetrahedron, new Vector3(1.5f, 0.86603f, 0.28868f), vetGameObj[i - 1].transform.rotation);
-                    }
-                }
-                
-            }
-        }
+        vetGameObj[0] = Instantiate(tetrahedron, new Vector3(0, 0, 0), Quaternion.identity);
+        vetGameObj[1] = Instantiate(tetrahedron, new Vector3(1, 0, 0), Quaternion.identity);
+        vetGameObj[2] = Instantiate(tetrahedron, new Vector3(2, 0, 0), Quaternion.identity);
+        vetGameObj[3] = Instantiate(tetrahedron, new Vector3(0.5f, 0, 0.86603f), Quaternion.identity);
+        vetGameObj[4] = Instantiate(tetrahedron, new Vector3(1.5f, 0, 0.86603f), Quaternion.identity);
+        vetGameObj[5] = Instantiate(tetrahedron, new Vector3(1, 0, 1.73206f), Quaternion.identity);
+
+        vetGameObj[6] = Instantiate(tetrahedron, new Vector3(0.5f, 0.86603f, 0.28868f), Quaternion.identity);
+        vetGameObj[7] = Instantiate(tetrahedron, new Vector3(1.5f, 0.86603f, 0.28868f), Quaternion.identity);
+        vetGameObj[8] = Instantiate(tetrahedron, new Vector3(1, 0.86603f, 1.15471f), Quaternion.identity);
+
+        vetGameObj[9] = Instantiate(tetrahedron, new Vector3(1, 1.73206f, 0.578f), Quaternion.identity);
+
 
         // Criando o objeto pai para os tetraedros
         pai = new GameObject();
