@@ -31,7 +31,7 @@ public class Manager : MonoBehaviour
         vetGameObj[16] = Instantiate(tetrahedron, new Vector3(1, 1.73206f, 0.578f), Quaternion.Euler(new Vector3(108, 0, 0)));
         vetGameObj[17] = Instantiate(tetrahedron, new Vector3(1.5f, 1.73206f, 1.445f), Quaternion.Euler(new Vector3(108, 120, 0)));
         vetGameObj[18] = Instantiate(tetrahedron, new Vector3(2, 1.73206f, 0.578f), Quaternion.Euler(new Vector3(108, 240, 0)));
-        Debug.Log(GetCentro(vetGameObj[9]));
+
         //Criando o objeto pai para os tetraedros
 
         //Tornando o tetraedro 3 filho do objeto pai
@@ -40,17 +40,27 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Nenhuma ação necessária para a rotação adicional neste momento
-        vetGameObj[9].transform.RotateAround(new Vector3(1.5f, 2.02f, 0.78f), Vector3.up, 8 * Time.deltaTime);
+        Debug.Log(GetCentro(vetGameObj[9]));
+        vetGameObj[9].transform.RotateAround(new Vector3(1.5f, 0.4f, 0.86603f), Vector3.up, 8 * Time.deltaTime);
     }
 
-    Vector3 GetCentro(GameObject obj)
+    void GirarBase()
     {
-        Vector3 vertice1 = obj.transform.position;
- 
+        pai = new GameObject();
+        for(int i = 0; i < 5; i++)
+        {
+            vetGameObj[i].transform.parent = pai.transform;
+        }
+
+    }
+
+    Vector3 GetCentro(Vector3 origem)
+    {
+        Vector3 vertice1 = origem;
+
         Vector3 vertice2 = vertice1 + new Vector3(1f, 0f, 0f);
-        Vector3 vertice3 = vertice1 + new Vector3(0.5f, Mathf.Sqrt(3f) / 2f, 0f);
-        Vector3 vertice4 = vertice1 + new Vector3(0.5f, Mathf.Sqrt(3f) / 6f, Mathf.Sqrt(6f) / 3f);
+        Vector3 vertice3 = vertice1 + new Vector3(0.5f, 0f, 0.86603f);
+        Vector3 vertice4 = vertice1 + new Vector3(0.5f, 0.86603f, 0.28868f);
 
         Vector3 centroide = (vertice1 + vertice2 + vertice3 + vertice4) / 4f;
 
